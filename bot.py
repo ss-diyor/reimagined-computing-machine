@@ -14,7 +14,7 @@ logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
 )
-logger = logging.getLogger(name)
+logger = logging.getLogger(__name__)
 
 
 async def main():
@@ -39,5 +39,5 @@ async def main():
     await dp.start_polling(bot)
 
 
-if name == "main":
+if __name__ == "__main__":
     asyncio.run(main())
